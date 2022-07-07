@@ -1,0 +1,13 @@
+{
+  "name": "second-step",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vue-template-compiler": "^2.7.0"
+  }
+}
