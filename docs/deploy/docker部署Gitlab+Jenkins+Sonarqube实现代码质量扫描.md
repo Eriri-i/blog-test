@@ -23,9 +23,8 @@
     jmke
 ```
 
-jjj
 
-![img](tupian.jpg)
+![img](/tupian.jpg)
 
 1. jenkins安装
 1. docker安装
