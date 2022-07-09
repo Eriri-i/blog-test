@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>docker常用命令 | 代码狗</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="别问，问就是不知道">
+    
+    <link rel="preload" href="/assets/css/0.styles.69ab136c.css" as="style"><link rel="preload" href="/assets/js/app.c1bd0a72.js" as="script"><link rel="preload" href="/assets/js/2.f4e85486.js" as="script"><link rel="preload" href="/assets/js/13.e8cc39a2.js" as="script"><link rel="prefetch" href="/assets/js/10.709bf4ee.js"><link rel="prefetch" href="/assets/js/11.b99722c5.js"><link rel="prefetch" href="/assets/js/12.4ed190c9.js"><link rel="prefetch" href="/assets/js/14.19890238.js"><link rel="prefetch" href="/assets/js/15.c6bf2f16.js"><link rel="prefetch" href="/assets/js/3.8ea7016b.js"><link rel="prefetch" href="/assets/js/4.023412c1.js"><link rel="prefetch" href="/assets/js/5.6c673882.js"><link rel="prefetch" href="/assets/js/6.5898dc0c.js"><link rel="prefetch" href="/assets/js/7.d726164e.js"><link rel="prefetch" href="/assets/js/8.595a4e2b.js"><link rel="prefetch" href="/assets/js/9.3d98f363.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.69ab136c.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">代码狗</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/deploy/" class="nav-link">
+    部署
+  </a></div><div class="nav-item"><a href="/docker/" class="nav-link router-link-active">
+    docker
+  </a></div><div class="nav-item"><a href="/springboot-async/" class="nav-link">
+    springboot-async
+  </a></div><div class="nav-item"><a href="https://github.com/Eriri-i" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/deploy/" class="nav-link">
+    部署
+  </a></div><div class="nav-item"><a href="/docker/" class="nav-link router-link-active">
+    docker
+  </a></div><div class="nav-item"><a href="/springboot-async/" class="nav-link">
+    springboot-async
+  </a></div><div class="nav-item"><a href="https://github.com/Eriri-i" target="_blank" rel="noopener noreferrer" class="nav-link external">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>docker常用命令</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docker/docker%E7%AC%94%E8%AE%B0.html#其他常用命令" class="sidebar-link">其他常用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docker/docker%E7%AC%94%E8%AE%B0.html#查看元数据" class="sidebar-link">查看元数据</a></li><li class="sidebar-sub-header"><a href="/docker/docker%E7%AC%94%E8%AE%B0.html#查看容器信息" class="sidebar-link">查看容器信息</a></li><li class="sidebar-sub-header"><a href="/docker/docker%E7%AC%94%E8%AE%B0.html#找出最近创建的容器并获取它的container-id-通过管道xargs-作为查询容器历史的参数" class="sidebar-link">找出最近创建的容器并获取它的container ID，通过管道xargs 作为查询容器历史的参数</a></li><li class="sidebar-sub-header"><a href="/docker/docker%E7%AC%94%E8%AE%B0.html#进入容器" class="sidebar-link">进入容器</a></li><li class="sidebar-sub-header"><a href="/docker/docker%E7%AC%94%E8%AE%B0.html#将容器内的文件或目录复制到宿主机-从宿主机复制目录到容器内" class="sidebar-link">将容器内的文件或目录复制到宿主机/从宿主机复制目录到容器内</a></li></ul></li><li><a href="/docker/docker%E7%AC%94%E8%AE%B0.html#小结" class="sidebar-link">小结</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/docker/docker%E7%AC%94%E8%AE%B0.html#作业练习" class="sidebar-link">作业练习</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="docker常用命令"><a href="#docker常用命令" class="header-anchor">#</a> docker常用命令</h1> <h2 id="其他常用命令"><a href="#其他常用命令" class="header-anchor">#</a> 其他常用命令</h2> <h3 id="查看元数据"><a href="#查看元数据" class="header-anchor">#</a> 查看元数据</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker inspect -s d</span>
+WARNING: --size ignored <span class="token keyword">for</span> image
+<span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">&quot;Id&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;sha256:d1165f2212346b2bab48cb01c1e39ee8ad1be46b87873d9ca7a4e434980a7726&quot;</span>,
+        <span class="token string">&quot;RepoTags&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;hello-world:latest&quot;</span>
+        <span class="token punctuation">]</span>,
+        <span class="token string">&quot;RepoDigests&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+            <span class="token string">&quot;hello-world@sha256:9f6ad537c5132bcce57f7a0a20e317228d382c3cd61edae14650eec68b2b345c&quot;</span>
+        <span class="token punctuation">]</span>,
+        <span class="token string">&quot;Parent&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+        <span class="token string">&quot;Comment&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+        <span class="token string">&quot;Created&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;2021-03-05T23:25:25.230064203Z&quot;</span>,
+        <span class="token string">&quot;Container&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;f5a78ef54769bb8490754e9e063a89f90cc8eee6a6c5a0a72655826e99df116e&quot;</span>,
+        <span class="token string">&quot;ContainerConfig&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;Hostname&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;f5a78ef54769&quot;</span>,
+            <span class="token string">&quot;Domainname&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+            <span class="token string">&quot;User&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+            <span class="token string">&quot;AttachStdin&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;AttachStdout&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;AttachStderr&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;Tty&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;OpenStdin&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;StdinOnce&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;Env&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span>
+            <span class="token punctuation">]</span>,
+            <span class="token string">&quot;Cmd&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;/bin/sh&quot;</span>,
+                <span class="token string">&quot;-c&quot;</span>,
+                <span class="token string">&quot;#(nop) &quot;</span>,
+                <span class="token string">&quot;CMD [<span class="token entity" title="\&quot;">\&quot;</span>/hello<span class="token entity" title="\&quot;">\&quot;</span>]&quot;</span>
+            <span class="token punctuation">]</span>,
+            <span class="token string">&quot;Image&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;sha256:77fe0a37fa6ce641a004815f2761a9042618557d253f312cd3da61780e372c8f&quot;</span>,
+            <span class="token string">&quot;Volumes&quot;</span><span class="token builtin class-name">:</span> null,
+            <span class="token string">&quot;WorkingDir&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+            <span class="token string">&quot;Entrypoint&quot;</span><span class="token builtin class-name">:</span> null,
+            <span class="token string">&quot;OnBuild&quot;</span><span class="token builtin class-name">:</span> null,
+            <span class="token string">&quot;Labels&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>,
+        <span class="token string">&quot;DockerVersion&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;19.03.12&quot;</span>,
+        <span class="token string">&quot;Author&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+        <span class="token string">&quot;Config&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;Hostname&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+            <span class="token string">&quot;Domainname&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+            <span class="token string">&quot;User&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+            <span class="token string">&quot;AttachStdin&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;AttachStdout&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;AttachStderr&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;Tty&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;OpenStdin&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;StdinOnce&quot;</span><span class="token builtin class-name">:</span> false,
+            <span class="token string">&quot;Env&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span>
+            <span class="token punctuation">]</span>,
+            <span class="token string">&quot;Cmd&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;/hello&quot;</span>
+            <span class="token punctuation">]</span>,
+            <span class="token string">&quot;Image&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;sha256:77fe0a37fa6ce641a004815f2761a9042618557d253f312cd3da61780e372c8f&quot;</span>,
+            <span class="token string">&quot;Volumes&quot;</span><span class="token builtin class-name">:</span> null,
+            <span class="token string">&quot;WorkingDir&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;&quot;</span>,
+            <span class="token string">&quot;Entrypoint&quot;</span><span class="token builtin class-name">:</span> null,
+            <span class="token string">&quot;OnBuild&quot;</span><span class="token builtin class-name">:</span> null,
+            <span class="token string">&quot;Labels&quot;</span><span class="token builtin class-name">:</span> null
+        <span class="token punctuation">}</span>,
+        <span class="token string">&quot;Architecture&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;amd64&quot;</span>,
+        <span class="token string">&quot;Os&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;linux&quot;</span>,
+        <span class="token string">&quot;Size&quot;</span><span class="token builtin class-name">:</span> <span class="token number">13336</span>,
+        <span class="token string">&quot;VirtualSize&quot;</span><span class="token builtin class-name">:</span> <span class="token number">13336</span>,
+        <span class="token string">&quot;GraphDriver&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;Data&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+                <span class="token string">&quot;MergedDir&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/var/lib/docker/overlay2/779f14f2c4ea5e9f46b85fd56aaab2f020a75e9f5d6ab34d0616170384b49c60/merged&quot;</span>,
+                <span class="token string">&quot;UpperDir&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/var/lib/docker/overlay2/779f14f2c4ea5e9f46b85fd56aaab2f020a75e9f5d6ab34d0616170384b49c60/diff&quot;</span>,
+                <span class="token string">&quot;WorkDir&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/var/lib/docker/overlay2/779f14f2c4ea5e9f46b85fd56aaab2f020a75e9f5d6ab34d0616170384b49c60/work&quot;</span>
+            <span class="token punctuation">}</span>,
+            <span class="token string">&quot;Name&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;overlay2&quot;</span>
+        <span class="token punctuation">}</span>,
+        <span class="token string">&quot;RootFS&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;Type&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;layers&quot;</span>,
+            <span class="token string">&quot;Layers&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">[</span>
+                <span class="token string">&quot;sha256:f22b99068db93900abe17f7f5e09ec775c2826ecfe9db961fea68293744144bd&quot;</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>,
+        <span class="token string">&quot;Metadata&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+            <span class="token string">&quot;LastTagTime&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;0001-01-01T00:00:00Z&quot;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span>
+</code></pre></div><h3 id="查看容器信息"><a href="#查看容器信息" class="header-anchor">#</a> 查看容器信息</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker container ls --help</span>
+
+Usage:  <span class="token function">docker</span> container <span class="token function">ls</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span>
+
+List containers
+
+Aliases:
+  ls, ps, list
+
+Options:
+  -a, --all             Show all containers <span class="token punctuation">(</span>default shows just running<span class="token punctuation">)</span>
+  -f, --filter filter   Filter output based on conditions provided
+      --format string   Pretty-print containers using a Go template
+  -n, --last int        Show n last created containers <span class="token punctuation">(</span>includes all states<span class="token punctuation">)</span> <span class="token punctuation">(</span>default -1<span class="token punctuation">)</span>
+  -l, --latest          Show the latest created container <span class="token punctuation">(</span>includes all states<span class="token punctuation">)</span>
+      --no-trunc        Don't truncate output
+  -q, --quiet           Only display container IDs
+  -s, --size            Display total <span class="token function">file</span> sizes
+</code></pre></div><h3 id="找出最近创建的容器并获取它的container-id-通过管道xargs-作为查询容器历史的参数"><a href="#找出最近创建的容器并获取它的container-id-通过管道xargs-作为查询容器历史的参数" class="header-anchor">#</a> 找出最近创建的容器并获取它的container ID，通过管道xargs 作为查询容器历史的参数</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker container ls -lq |xargs docker logs -t</span>
+<span class="token punctuation">[</span>root@50dab31f1449 /<span class="token punctuation">]</span><span class="token comment"># exit</span>
+</code></pre></div><h3 id="进入容器"><a href="#进入容器" class="header-anchor">#</a> 进入容器</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 方式1：exec进入正在运行的容器</span>
+<span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker exec --help	#指令说明</span>
+
+Usage:  <span class="token function">docker</span> <span class="token builtin class-name">exec</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER COMMAND <span class="token punctuation">[</span>ARG<span class="token punctuation">..</span>.<span class="token punctuation">]</span>
+
+Run a <span class="token builtin class-name">command</span> <span class="token keyword">in</span> a running container
+
+Options:
+  -d, --detach               Detached mode: run <span class="token builtin class-name">command</span> <span class="token keyword">in</span> the background
+      --detach-keys string   Override the key sequence <span class="token keyword">for</span> detaching a container
+  -e, --env list             Set environment variables
+      --env-file list        Read <span class="token keyword">in</span> a <span class="token function">file</span> of environment variables
+  -i, --interactive          Keep STDIN <span class="token function">open</span> even <span class="token keyword">if</span> not attached
+      --privileged           Give extended privileges to the <span class="token builtin class-name">command</span>
+  -t, --tty                  Allocate a pseudo-TTY
+  -u, --user string          Username or <span class="token environment constant">UID</span> <span class="token punctuation">(</span>format: <span class="token operator">&lt;</span>name<span class="token operator">|</span>uid<span class="token operator">&gt;</span><span class="token punctuation">[</span>:<span class="token operator">&lt;</span>group<span class="token operator">|</span>gid<span class="token operator">&gt;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+  -w, --workdir string       Working directory inside the container
+
+<span class="token comment"># 例子</span>
+<span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker exec -it 50 /bin/bash</span>
+<span class="token punctuation">[</span>root@50dab31f1449 /<span class="token punctuation">]</span><span class="token comment"># read escape sequence</span>
+
+
+<span class="token comment"># 例子2：通过docker attach 容器id</span>
+<span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker attach --help	 #指令说明</span>
+
+Usage:  <span class="token function">docker</span> attach <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER
+
+Attach <span class="token builtin class-name">local</span> standard input, output, and error streams to a running container
+
+Options:
+      --detach-keys string   Override the key sequence <span class="token keyword">for</span> detaching a container
+      --no-stdin             Do not attach STDIN
+      --sig-proxy            Proxy all received signals to the process <span class="token punctuation">(</span>default <span class="token boolean">true</span><span class="token punctuation">)</span>
+
+<span class="token comment">#例子</span>
+<span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker attach 50</span>
+<span class="token punctuation">[</span>root@50dab31f1449 /<span class="token punctuation">]</span><span class="token comment"># ls</span>
+bin  dev  etc  home  lib  lib64  lost+found  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+</code></pre></div><h3 id="将容器内的文件或目录复制到宿主机-从宿主机复制目录到容器内"><a href="#将容器内的文件或目录复制到宿主机-从宿主机复制目录到容器内" class="header-anchor">#</a> 将容器内的文件或目录复制到宿主机/从宿主机复制目录到容器内</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 指令说明</span>
+<span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker cp --help</span>
+
+Usage:  <span class="token function">docker</span> <span class="token function">cp</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> CONTAINER:SRC_PATH DEST_PATH<span class="token operator">|</span>-
+	<span class="token function">docker</span> <span class="token function">cp</span> <span class="token punctuation">[</span>OPTIONS<span class="token punctuation">]</span> SRC_PATH<span class="token operator">|</span>- CONTAINER:DEST_PATH
+
+Copy files/folders between a container and the <span class="token builtin class-name">local</span> filesystem
+
+Use <span class="token string">'-'</span> as the <span class="token builtin class-name">source</span> to <span class="token builtin class-name">read</span> a <span class="token function">tar</span> archive from stdin
+and extract it to a directory destination <span class="token keyword">in</span> a container.
+Use <span class="token string">'-'</span> as the destination to stream a <span class="token function">tar</span> archive of a
+container <span class="token builtin class-name">source</span> to stdout.
+
+Options:
+  -a, --archive       Archive mode <span class="token punctuation">(</span>copy all uid/gid information<span class="token punctuation">)</span>
+  -L, --follow-link   Always follow symbol <span class="token function">link</span> <span class="token keyword">in</span> SRC_PATH
+<span class="token comment"># 从宿主机复制到容器内</span>
+<span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker cp ./test/ 50:/usr/local		#复制例子</span>
+<span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker exec -it 50 /bin/bash			#进入容器查看</span>
+<span class="token punctuation">[</span>root@50dab31f1449 /<span class="token punctuation">]</span><span class="token comment"># cd /usr/local</span>
+<span class="token punctuation">[</span>root@50dab31f1449 local<span class="token punctuation">]</span><span class="token comment"># ls</span>
+bin  etc  games  include  lib  lib64  libexec  sbin  share  src  <span class="token builtin class-name">test</span>
+
+<span class="token comment"># 从容器内复制到宿主机</span>
+<span class="token punctuation">[</span>root@50dab31f1449 local<span class="token punctuation">]</span><span class="token comment"># mkdir dirFromContainer		#容器内创建目录</span>
+<span class="token punctuation">[</span>root@50dab31f1449 local<span class="token punctuation">]</span><span class="token comment"># cd dirFromContainer/			</span>
+<span class="token punctuation">[</span>root@50dab31f1449 dirFromContainer<span class="token punctuation">]</span><span class="token comment"># touch test.txt	#容器内创建文件</span>
+<span class="token punctuation">[</span>root@50dab31f1449 local<span class="token punctuation">]</span><span class="token comment"># exit							#退出容器</span>
+<span class="token builtin class-name">exit</span>
+<span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># docker cp 50:/usr/local/dirFromContainer/ /root/		#从容器内复制到宿主机</span>
+<span class="token punctuation">[</span>root@centos7 ~<span class="token punctuation">]</span><span class="token comment"># ls									#查看是否成功</span>
+dirFromContainer  <span class="token builtin class-name">test</span>
+</code></pre></div><h2 id="小结"><a href="#小结" class="header-anchor">#</a> 小结</h2> <p><img src="D:/Documents/docker%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/docker%E7%AC%94%E8%AE%B0.assets/image-20210620183559552.png" alt="image-20210620183559552"></p> <h2 id="作业练习"><a href="#作业练习" class="header-anchor">#</a> 作业练习</h2> <blockquote><p>docker安装nginx</p></blockquote> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># hub.docker.com 查看需要的nginx镜像版本</span>
+<span class="token comment"># docker pull nginx</span>
+<span class="token comment"># docker run --name nginx1 -p 3333:80 -d nginx</span>
+<span class="token comment"># curl localhost:3333</span>
+</code></pre></div><blockquote><p>docker安装tomcat</p></blockquote> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># hub.docker.com 查看需要的tomcat镜像版本</span>
+<span class="token comment"># 运行一次就删除容器:docker run -it --rm tomcat</span>
+<span class="token comment"># docker pull tomcat</span>
+<span class="token comment"># docker run --name tomcat -p 3344:8080 -d tomcat</span>
+<span class="token comment"># curl localhost:3344</span>
+<span class="token comment"># 注意：默认镜像中webapp目录为空，需要自己解压缩内容到webapp</span>
+</code></pre></div><blockquote><p>docker安装elasticsearch kibana</p></blockquote> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 对于内存占用较大的镜像，应该限制内存</span>
+<span class="token comment"># 查看docker占用的内存情况：docker stats</span>
+<span class="token comment"># elasticsearch 启动时附带参数，限制使用的内存</span>
+<span class="token function">docker</span> run -d --name es -p <span class="token number">9200</span>:9200 -p <span class="token number">9300</span>:9300 -e <span class="token string">&quot;discovery.type=single-node&quot;</span> -e <span class="token assign-left variable">ES_JAVA_OPTS</span><span class="token operator">=</span><span class="token string">&quot;-Xms64m -Xmx512m&quot;</span> elasticsearch
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.c1bd0a72.js" defer></script><script src="/assets/js/2.f4e85486.js" defer></script><script src="/assets/js/13.e8cc39a2.js" defer></script>
+  </body>
+</html>
