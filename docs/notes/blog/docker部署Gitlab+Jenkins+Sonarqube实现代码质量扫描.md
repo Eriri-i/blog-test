@@ -1,0 +1,35 @@
+### docker部署Gitlab+Jenkins+Sonarqube实现代码质量扫描
+
+#### 1.sonarqube安装
+
+1. sonarqube安装
+
+    由于
+
+``` xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <c3p0-config>
+    <default-config>
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+        <property name="jdbcUrl">jdbc:mysql://localhost:3306/imooc?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true</property>
+        <property name="user">root</property>
+        <property name="password">root</property>
+        <!-- 连接池初始连接数量 -->
+        <property name="initialPoolSize">10</property>
+        <!--最大连接数量-->
+        <property name="maxPoolSize">20</property>
+    </default-config>
+    </c3p0-config>
+    jmke
+```
+
+jjj
+
+![img](tupian.jpg)
+
+1. jenkins安装
+1. docker安装
+
+#### 2. Gitlab安装
+
+#### 3. Jenkins安装
