@@ -8,7 +8,7 @@ features:
 - title: 我没有
   details: 啥也没有+2。
 - title: 别乱说
-  details: 啥也没有+3l  。
+  details: 啥也没有+3ll  。
 ---
 ::: slot footer
 MIT Licensed | Copyright © 2018-present [Eriri-i](https://github.com/Eriri-i)
