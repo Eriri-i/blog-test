@@ -9,7 +9,13 @@ features:
   details: 啥也没有+2。
 - title: 别乱说
   details: 啥也没有+3。
+footer: MIT Licensed | Copyright © 2022-present Eriri-i
 ---
-::: slot footer
-MIT Licensed | Copyright © 2018-present [Eriri-i](https://github.com/Eriri-i)
-:::
+
+# 测试
+
+这是测试普通文本**测试普通文本**
+
+## 测试2
+
+zh**测试普通文本**

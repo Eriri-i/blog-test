@@ -16,7 +16,7 @@ java-1.8.0-openjdk-1.8.0.292.b10-1.el7_9.x86_64
 
 ### 下载Oracle jdk
 
-> 选用jdk1.8最后一个免费版本，u202，地址：https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
+> 选用jdk1.8最后一个免费版本，u202，地址：<https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html>
 
 ```shell
 # 解压
@@ -39,7 +39,7 @@ export JAVA_HOME PATH
 
 ## 安装tomcat
 
-> 选用tomcat 8.5.x，地址：https://tomcat.apache.org/download-80.cgi
+> 选用tomcat 8.5.x，地址：<https://tomcat.apache.org/download-80.cgi>
 
 ```shell
 # 解压
@@ -287,7 +287,7 @@ curl: (7) Failed connect to localhost:8080; Connection refused
 
 > 如果不需要加入的其他bean中（依赖注入），bean标签可以不用配id属性
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
