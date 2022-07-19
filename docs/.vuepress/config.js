@@ -1,6 +1,6 @@
 module.exports = {
     dest: ".site",
-    title: '代码狗',
+    title: 'catrrr',
     description: '别问，问就是不知道',
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
@@ -10,6 +10,9 @@ module.exports = {
         lineNumbers: false
     },
     themeConfig: {
+        repo: 'Eriri-i/blog-test',
+        repoLabel: '查看源码',
+        docsDir: 'docs',
         nav: [
             { text: '部署', link: '/deploy/' },
             { text: 'docker', link: '/docker/' },
@@ -61,6 +64,8 @@ module.exports = {
             '/': [
                 ''
             ]
-        }
+        },
+        lastUpdated: true,
+        editLinks: true
     }
 };
