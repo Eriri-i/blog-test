@@ -14,33 +14,41 @@ module.exports = {
         repoLabel: '查看源码',
         docsDir: 'docs',
         nav: [
-            { text: '部署', link: '/deploy/' },
-            { text: 'docker', link: '/docker/' },
-            { text: 'springboot-async', link: '/springboot-async/' },
             {
-                text: 'code',
+                text: '代码',
                 airalLabel: 'code menu',
                 items: [
                     {
-                        text: 'Group1', items: [
+                        text: '分组1', items: [
                             { text: '部署', link: '/deploy/' },
-                            { text: 'docker', link: '/docker/' }
-                        ]
-                    },
-                    {
-                        text: 'Group2', items: [
-                            { text: '部署', link: '/deploy/' },
-                            { text: 'docker', link: '/docker/' }
+                            { text: 'docker', link: '/docker/' },
+                            { text: 'springboot-async', link: '/springboot-async/' },
                         ]
                     }
                 ]
             },
             {
-                text: 'code',
-                airalLabel: 'code menu',
+                text: '问题笔记',
+                airalLabel: 'problem menu',
                 items: [
-                    { text: '部署', link: '/deploy/' },
-                    { text: 'docker', link: '/docker/' }
+                    {
+                        text: '分组1', items: [
+                            { text: '问题1', link: '/problem/' },
+                            { text: '问题2', link: '/problem/' },
+                        ]
+                    }
+                ]
+            },
+            {
+                text: '其他',
+                airalLabel: 'other menu',
+                items: [
+                    {
+                        text: '分组1', items: [
+                            { text: '其他1', link: '/other/' },
+                            { text: '其他2', link: '/other/' },
+                        ]
+                    }
                 ]
             },
             { text: 'Github', link: 'https://github.com/Eriri-i', target: '_blank', rel: '' }
@@ -60,6 +68,12 @@ module.exports = {
             '/springboot-async/': [
                 '',
                 'springboot-async'
+            ],
+            '/problem/': [
+                ''
+            ],
+            '/other/': [
+                ''
             ],
             '/': [
                 ''
