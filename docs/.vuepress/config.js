@@ -1,6 +1,6 @@
 module.exports = {
     dest: ".site",
-    title: 'catrrr',
+    title: 'catRunRunRun',
     description: '别问，问就是不知道',
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
@@ -34,7 +34,6 @@ module.exports = {
                     {
                         text: '分组1', items: [
                             { text: '问题1', link: '/problem/' },
-                            { text: '问题2', link: '/problem/' },
                         ]
                     }
                 ]
@@ -46,7 +45,6 @@ module.exports = {
                     {
                         text: '分组1', items: [
                             { text: '其他1', link: '/other/' },
-                            { text: '其他2', link: '/other/' },
                         ]
                     }
                 ]
@@ -73,7 +71,8 @@ module.exports = {
                 ''
             ],
             '/other/': [
-                ''
+                '',
+                'systemclt笔记'
             ],
             '/': [
                 ''
